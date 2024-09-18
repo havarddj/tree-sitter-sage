@@ -4448,7 +4448,7 @@
           "name": "right",
           "content": {
             "type": "SYMBOL",
-            "name": "call"
+            "name": "primary_expression"
           }
         }
       ]

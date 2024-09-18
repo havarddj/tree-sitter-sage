@@ -910,7 +910,7 @@ module.exports = grammar({
 	sage_gen_assignment: $ => seq(
 	    $._sage_gen_assign_lhs,
 	    '=',
-            field('right', $.call),
+            field('right', $.primary_expression),
 	),
         
 	// matches 1 or more "identifier" separated with ,

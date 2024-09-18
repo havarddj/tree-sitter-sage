@@ -2782,7 +2782,7 @@
         "required": true,
         "types": [
           {
-            "type": "call",
+            "type": "primary_expression",
             "named": true
           }
         ]
