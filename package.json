@@ -1,0 +1,58 @@
+{
+  "name": "tree-sitter-sage",
+  "version": "1.0.0",
+  "description": "tree-sitter grammar for SageMath",
+  "main": "grammar.js",
+  "types": "bindings/node",
+  "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/havarddj/tree-sitter-sage.git"
+  },
+  "keywords": [
+    "sage",
+    "tree-sitter"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**",
+    "*.wasm"
+  ],
+  "author": "Håvard Damm-Johnsen, Marius Haugstad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/havarddj/tree-sitter-sage/issues"
+  },
+  "homepage": "https://github.com/havarddj/tree-sitter-sage#readme",
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.1"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.1"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.23.0",
+    "prebuildify": "^6.0.1"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.sage",
+      "injection-regex": "^sage$"
+    }
+  ]
+}
