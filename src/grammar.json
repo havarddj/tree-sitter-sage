@@ -4358,31 +4358,6 @@
       "members": [
         {
           "type": "FIELD",
-          "name": "left",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_sage_symb_assign_lhs"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "="
-        },
-        {
-          "type": "FIELD",
-          "name": "right",
-          "content": {
-            "type": "SYMBOL",
-            "name": "expression_statement"
-          }
-        }
-      ]
-    },
-    "_sage_symb_assign_lhs": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
           "name": "name",
           "content": {
             "type": "SYMBOL",
@@ -4429,6 +4404,18 @@
         {
           "type": "STRING",
           "value": ")"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "FIELD",
+          "name": "right",
+          "content": {
+            "type": "SYMBOL",
+            "name": "expression_statement"
+          }
         }
       ]
     },
@@ -6490,7 +6477,7 @@
       "primary_expression"
     ],
     [
-      "_sage_symb_assign_lhs",
+      "sage_symb_assignment",
       "primary_expression"
     ]
   ],

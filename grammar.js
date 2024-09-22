@@ -60,7 +60,7 @@ module.exports = grammar({
 	[$.match_statement, $.primary_expression],
 	// [$.expression, $.sage_ellipsis_range],
 	// [$.expression, $.sage_ellipsis_iter],
-        [$._sage_symb_assign_lhs, $.primary_expression],
+        [$.sage_symb_assignment, $.primary_expression],
 	// [$.sage_ellipsis_range, $.sage_ellipsis_range],
 	// [$.sage_ellipsis_iter, $.sage_ellipsis_iter],
     ],
@@ -886,15 +886,15 @@ module.exports = grammar({
         // TODO: this ugly yo
 	// sage symb assignment
 	sage_symb_assignment: $ =>  seq(
-	    field('left', $._sage_symb_assign_lhs),
+	    // field('left', $._sage_symb_assign_lhs),
+            field('name', $.identifier),
+            '(', commaSep1(field('param', $.identifier)), ')',
 	    '=',
             field('right', $.expression_statement),
 	),
         
-	_sage_symb_assign_lhs: $ => seq(
-            field('name', $.identifier),
-            '(', commaSep1(field('param', $.identifier)), ')' 
-	),
+	// _sage_symb_assign_lhs: $ => seq(
+	// ),
         
         // sage_symb_assignment: $ => seq(
         //     $.identifier,

@@ -2812,28 +2812,6 @@
     "type": "sage_symb_assignment",
     "named": true,
     "fields": {
-      "left": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      },
       "name": {
         "multiple": false,
         "required": true,
