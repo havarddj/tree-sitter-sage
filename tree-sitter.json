@@ -1,0 +1,33 @@
+{
+  "grammars": [
+    {
+      "name": "sage",
+      "camelcase": "Sage",
+      "scope": "source.sage",
+      "path": ".",
+      "file-types": null,
+      "injection-regex": "^sage$"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "tree-sitter grammar for SageMath",
+    "authors": [
+      {
+        "name": "Håvard Damm-Johnsen, Marius Haugstad"
+      }
+    ],
+    "links": {
+      "repository": "git+https://github.com/havarddj/tree-sitter-sage.git"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
